@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{%block content%}
+<head>
+	<title>Project Details</title>
+</head>
+<body>
+	<div style="padding:40px">
+		<center>
+			<h1><u><b>Project Details</b></u></h1>
+			<br>
+		</center>	
+		<h2><u>Project ID: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[0]}}</h3>
+		{% endfor %}
+		<br>	
+		<h2><u>Project Title: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[1]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Description: </u></h2>	
+		{% for proj in projOpen %}
+		<div class="divtext" contentEditable>{{proj[2]}}</div>
+		{% endfor %}
+		<br>
+		<a class="btn btn-primary" href="{{url_for('updateproform')}}" target="_blank" role="button">Update Description</a>
+		<br>
+		<br>
+		<h2><u>Project Rating: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[3]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Done By: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[4]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Guide ID: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[5]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Guide Name: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[6]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Domain ID: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[7]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Domain Name: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{proj[8]}}</h3>
+		{% endfor %}
+		<br>
+	</div>
+</body>
+
+{% endblock %}
+
+
+
+	<!-- <table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col-md-1">Project ID</th>
+				<th scope="col-md-8">Project Description</th>
+				<th scope="col-md-1">Project Rating</th>
+				<th scope="col-md-1">Guide ID</th>
+				<th scope="col-sm-1">Domain ID</th>
+			</tr>
+		</thead>
+		{% for proj in projOpen %}
+		<tr>
+			<td> {{proj[0]}} </td>
+			<td> {{proj[1]}} </td>
+			<td> {{proj[2]}} </td>
+			<td> {{proj[3]}} </td>
+			<td> {{proj[4]}} </td>
+		</tr>
+		{% endfor %}
+	</table> -->

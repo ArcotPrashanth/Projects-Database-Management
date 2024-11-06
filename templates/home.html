@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{%block content%}
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<center>
+		<br>
+		<h1>PROJECT DATABASE</h1>
+		<br>
+		<div class="btn-group">
+			<a class="btn btn-success" href="{{url_for('addproject')}}" role="button">Add Project</a>
+			<a class="btn btn-info" href="{{url_for('openproject')}}" role="button">Open Project</a>
+			<a class="btn btn-danger" href="{{url_for('delproject')}}" role="button">Delete Project</a>
+			<a class="btn btn-primary" href="{{url_for('sortprojects')}}" role="button">Sort Projects</a>
+		</div>
+		<br>
+		<br>
+
+	<!-- {% for proj in projects %}
+	<h3>{{proj.title}}</h3>
+	<p>{{proj.done_by}}</p>
+	{% endfor %} -->	
+
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col-md-1">Project ID</th>
+				<th scope="col-md-7">Project Title</th>
+				<th scope="col-md-2">Group Name</th>
+				<th scope="col-md-1">Batch</th>
+				<th scope="col-md-1">USN</th>
+			</tr>
+		</thead>
+		{% for proj in projDetails %}
+		<tr>
+			<td> {{proj[0]}} </td>
+			<td> {{proj[1]}} </td>
+			<td> {{proj[2]}} </td>
+			<td> {{proj[3]}} </td>
+			<td> {{proj[4]}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<br>
+	<div class="btn-group">
+		<a class="btn btn-success" href="{{url_for('addproject')}}" role="button">Add Project</a>
+		<a class="btn btn-info" href="{{url_for('openproject')}}" role="button">Open Project</a>
+		<a class="btn btn-danger" href="{{url_for('delproject')}}" role="button">Delete Project</a>
+		<a class="btn btn-primary" href="{{url_for('sortprojects')}}" role="button">Sort Projects</a>
+	</div>
+</center>
+</body>
+
+{% endblock %}

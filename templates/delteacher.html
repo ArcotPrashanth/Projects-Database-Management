@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<head>
+	<title>Delete Lecturer</title>
+</head>
+<body>
+	<center>
+		<br>
+		<h1>Delete Lecturer</h1>
+		<br>
+		
+
+		<form action="http://127.0.0.1:5000/delteacher" method="post" autocomplete="off">
+
+			<div class="form-group row" >
+				<label for="inputTName" class="col-sm-4 col-form-label">Lecturer Name :</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="inputTName" name="tname" placeholder="Lecturer Name">
+				</div>
+			</div>
+			<br>
+			<br>
+			<input class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');" type="submit" value="Delete">
+		</form>
+
+	</center>
+</body>
+{% endblock %}

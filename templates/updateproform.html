@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<head>
+	<title>Update Project</title>
+</head>
+<body>
+	<center>
+   <br>
+   <h1>Update Project Description</h1>
+   <div style="padding:25px">
+   <form action="http://127.0.0.1:5000/updateproform" method="post" autocomplete="off">
+   	<div class="form-group row">
+      <label for="updateid" class="col-sm-3 col-form-label">ID of Project to Update :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="updateID" name="upID" placeholder="Project ID">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="updateTitle" class="col-sm-3 col-form-label">Title of Project to Update :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="updateTitle" name="upTitle" placeholder="Project Title">
+      </div>
+    </div>
+   	<div class="form-group row">
+      <label for="updateProjDes" class="col-sm-3 col-form-label">Update Project Description :</label>
+      <div class="col-sm-7">
+        <textarea class="form-control" id="updateProjDes" name="updes" rows="4"></textarea>
+      </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit">
+    <br>
+</center>
+</body>
+{% endblock %}

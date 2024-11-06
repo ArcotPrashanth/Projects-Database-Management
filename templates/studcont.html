@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{%block content%}
+<head>
+	<title>Students</title>
+</head>
+<body>
+	<center>
+		<br>
+		<h1>Student Details</h1>
+		<!-- <br>
+		<div class="btn-group">
+			<a class="btn btn-primary" href="{{url_for('addproject')}}" role="button">Add Project</a>
+			<a class="btn btn-danger" href="{{url_for('delproject')}}" role="button">Delete Project</a>
+		</div>
+		<br> -->
+		<br>
+
+	<!-- {% for proj in projects %}
+	<h3>{{proj.title}}</h3>
+	<p>{{proj.done_by}}</p>
+	{% endfor %} -->	
+
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col-md-1">Student USN</th>
+				<th scope="col-md-7">Student Name</th>
+				<th scope="col-md-2">Student Email</th>
+			</tr>
+		</thead>
+		{% for stud in studContact %}
+		<tr>
+			<td> {{stud[0]}} </td>
+			<td> {{stud[1]}} </td>
+			<td> {{stud[2]}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<br>
+	<!-- <div class="btn-group">
+		<a class="btn btn-primary" href="{{url_for('addproject')}}" role="button">Add Project</a>
+		<a class="btn btn-danger" href="{{url_for('delproject')}}" role="button">Delete Project</a>
+	</div> -->
+</center>
+</body>
+
+{% endblock %}

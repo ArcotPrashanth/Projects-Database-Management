@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<head>
+	<title>Add Lecturer</title>
+</head>
+<body>
+	<center>
+   <br>
+   <h1>Add Lecturer</h1>
+
+   <form action="http://127.0.0.1:5000/addteacher" method="post" autocomplete="off">
+
+    <br>
+    <div class="form-group row">
+      <label for="inputTeachID" class="col-sm-4 col-form-label">Teacher ID :</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputTeachID" name="itid" placeholder="Enter Teacher ID in CAPS">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputTeachName" class="col-sm-4 col-form-label">Teacher Name :</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputTeachName" name="itname" placeholder="Enter Teacher Name in CAPS">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputTeachMail" class="col-sm-4 col-form-label">Teacher email ID :</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="inputTeachMail" name="itmail" placeholder="Enter Teacher email-ID">
+      </div>
+    </div>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Submit">
+
+  </form>
+  <br>
+  <br>
+</center>
+</body>
+{% endblock %}

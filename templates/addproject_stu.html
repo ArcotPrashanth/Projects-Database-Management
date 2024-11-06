@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<head>
+	<title>Add Project</title>
+</head>
+<body>
+	<center>
+		<h1>Add Project</h1>
+		<a class="btn btn-primary" href="{{url_for('addproject')}}" role="button">Add Project</a>
+		<br>
+		<br>
+
+		<form action="http://127.0.0.1:5000/addproject" method="post" autocomplete="off">
+
+			<br>
+			<div class="form-group row">
+				<label for="inputUSN" class="col-sm-3 col-form-label">USN :</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" id="inputUSN" name="iusn" placeholder="USN">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputSName" class="col-sm-3 col-form-label">Student Name :</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" id="inputSName" name="isname" placeholder="Student Name">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputSEmail" class="col-sm-3 col-form-label">Student email ID :</label>
+				<div class="col-sm-8">
+					<input type="email" class="form-control" id="inputSEmail" name="isemail" placeholder="Student email ID">
+				</div>
+			</div>
+
+			<br>
+			<input class="btn btn-primary" type="submit" value="Submit">
+		</form>
+
+	</center>
+</body>
+{% endblock %}

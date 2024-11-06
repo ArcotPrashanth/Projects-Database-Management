@@ -1,0 +1,155 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<head>
+	<title>Add Project</title>
+</head>
+<body>
+	<center>
+   <br>
+   <h1>Add Project</h1>
+   <p>Please enter the details in caps!</p>
+    </center>
+   <div style="padding: 10px 60px 25px 100px">
+   <form action="http://127.0.0.1:5000/addproject" method="post" autocomplete="off">
+
+
+    <div class="form-group row">
+      <label for="inputProjId" class="col-sm-3 col-form-label">Project ID :   *</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputProjId" name="ipid" placeholder="Project ID" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputTitle" class="col-sm-3 col-form-label">Project Title :   *</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputTitle" name="ititle" placeholder="Project Title" required>
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="inputDoneBy" class="col-sm-3 col-form-label">Group Name :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputDoneBy" name="idoneBy" placeholder="Done By">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputBatch" class="col-sm-3 col-form-label">Batch :</label>
+      <div class="col-sm-2">
+        <select class="form-control" id="inputBatch" name="ibatch">
+          <option>2014-18</option>
+          <option>2015-19</option>
+          <option>2016-20</option>
+          <option>2017-21</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputUSN" class="col-sm-3 col-form-label">USN :   *</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputUSN" name="iusn" placeholder="USN" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputSName" class="col-sm-3 col-form-label">Student Name :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputSName" name="isname" placeholder="Student Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputSEmail" class="col-sm-3 col-form-label">Student email ID :</label>
+      <div class="col-sm-7">
+        <input type="email" class="form-control" id="inputSEmail" name="isemail" placeholder="Student email ID in SMALL LETTERS">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputDomId" class="col-sm-3 col-form-label">Domain ID :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputDomId" name="idid" placeholder="Domain ID">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputDomName" class="col-sm-3 col-form-label">Domain Name :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputDomName" name="idname" placeholder="Domain Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputGuideId" class="col-sm-3 col-form-label">Guide ID :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputGuideId" name="igid" placeholder="Guide ID">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputGuideName" class="col-sm-3 col-form-label">Guide Name :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputGuideName" name="igname" placeholder="Guide Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputGuideExp" class="col-sm-3 col-form-label">Guide Expertise :</label>
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="inputGuideExp" name="igexp" placeholder="Guide Expertise">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputProjDes" class="col-sm-3 col-form-label">Project Description :</label>
+      <div class="col-sm-7">
+        <textarea class="form-control" id="inputProjDes" name="ipdes" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputProjRat" class="col-sm-3 col-form-label">Project Rating :</label>
+      <div class="col-sm-1">
+        <select class="form-control" id="inputProjRat" name="iprat">
+          <option>1/5</option>
+          <option>2/5</option>
+          <option>3/5</option>
+          <option>4/5</option>
+          <option>5/5</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Submit">
+
+  </form>
+  </div>
+
+</body>
+{% endblock %}
+
+
+      <!-- <div class="row" >
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Title" id="title" name="title">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Done By" id="doneBy" name="doneBy">
+        </div>
+      </div> -->
+      <!--   <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-3 pt-0">Batch :</legend>
+      <div class="col-sm-1">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="grb15" value="2015-19" checked>
+          <label class="form-check-label" for="grb15">
+            2015-19
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="grb16" value="2016-20">
+          <label class="form-check-label" for="grb16">
+            2016-20
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset> -->
+
+            <!-- <div class="row">
+        <div class="col" >
+           <input type="text" class="form-control" placeholder="Your Comment Here.." id="comment" name="comment">
+        </div>
+      </div> -->

@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{%block content%}
+<head>
+	<title>Project Details</title>
+</head>
+<body>
+	<div style="padding:40px">
+		<center>
+			<h1><u><b>Project Details</b></u></h1>
+			<br>
+		</center>	
+		<h2><u>Project ID: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[0]}}</h3>
+		{% endfor %}
+		<br>	
+		<h2><u>Project Title: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[1]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Description: </u></h2>	
+		{% for project in projectOpen %}
+		<div class="divtext" contentEditable>{{project[2]}}</div>
+		{% endfor %}
+		<br>
+		<h2><u>Project Rating: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[3]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Done By: </u></h2>	
+		{% for proj in projOpen %}
+		<h3>{{project[4]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Guide ID: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[5]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Guide Name: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[6]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Domain ID: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[7]}}</h3>
+		{% endfor %}
+		<br>
+		<h2><u>Project Domain Name: </u></h2>	
+		{% for project in projectOpen %}
+		<h3>{{project[8]}}</h3>
+		{% endfor %}
+	</div>
+</body>
+
+{% endblock %}

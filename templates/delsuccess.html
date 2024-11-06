@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<head>
+	<title>Delete Success</title>
+</head>
+<body>
+	<center>
+	<h1>Delete Data</h1>
+	<br>
+	<br>
+	<br>
+  <div class="alert alert-success" role="alert">
+    Your data is deleted successfully!
+  </div>
+  <a class="btn btn-primary" href="{{url_for('home')}}" role="button">Go back</a>
+
+	</center>
+</body>
+{% endblock %}

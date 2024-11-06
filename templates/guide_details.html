@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{%block content%}
+<head>
+	<title>Guides</title>
+</head>
+<body>
+	<center>
+		<br>
+		<h1>Guide Details</h1>
+		<br>
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Guide ID</th>
+				<th>Guide Name</th>
+				<th>Guide Expertise</th>
+			</tr>
+		</thead>
+		{% for guide in guideDetails %}
+		<tr>
+			<td> {{guide[0]}} </td>
+			<td> {{guide[1]}} </td>
+			<td> {{guide[2]}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<br>
+</body>
+
+{% endblock %}

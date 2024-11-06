@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{%block content%}
+<head>
+	<title>Lecturers</title>
+</head>
+<body>
+	<center>
+		<br>
+		<h1>Lecturer Details</h1>
+		</div>
+		<br>
+
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col-md-1">Lecturer ID</th>
+				<th scope="col-md-7">Lecturer Name</th>
+				<th scope="col-md-2">Lecturer Email</th>
+			</tr>
+		</thead>
+		{% for teacher in teacherList %}
+		<tr>
+			<td> {{teacher[0]}} </td>
+			<td> {{teacher[1]}} </td>
+			<td> {{teacher[2]}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<br>
+</center>
+</body>
+
+{% endblock %}
